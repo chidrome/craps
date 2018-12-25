@@ -1,0 +1,23 @@
+{
+  "name": "craps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server . --files ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chidrome/craps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chidrome/craps/issues"
+  },
+  "homepage": "https://github.com/chidrome/craps#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.3"
+  }
+}
