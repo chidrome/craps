@@ -1,1 +1,123 @@
-style.css
+.table {
+	position: relative;
+	border: 20px solid black;
+	background-color: green;
+	width: 1100px;
+	height: 500px;
+	border-radius: 200px;
+	margin: auto;
+}
+
+.centerBets {
+	position: absolute;
+	border: 2px solid white;
+	border-radius: 20px;
+	height: 250px;
+	width: 200px;
+	left: 50%;
+	margin-left: -100px;
+	top: 50%;
+	margin-top: -60px;
+}
+
+.hardWays {
+	position: absolute;
+	border: 2px solid white;
+	width: 99px;
+	height: 50px;
+	text-align: center;
+}
+
+.seven {
+	position: absolute;
+	border: 2px solid white;
+	border-color: 20px;
+	width: 120px;
+	height: 50px;
+	left: 50%;
+	top: 50%;
+	margin-left: -57px;
+	margin-top: -112px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	text-align: center;
+}
+
+.centerSingleRoll {
+	position: absolute;
+	border: 2px solid white;
+	height: 50px;
+	top: 41%;
+	margin-top: -1px;
+	text-align: center;
+}
+
+#hardSix {
+	margin-left: -2px;
+	margin-top: -2px;
+	border-top-left-radius: 20px;
+}
+
+#hardTen {
+	left: 50%;
+	margin-top: -2px;
+	border-top-right-radius: 20px;
+	margin-left: -1px;
+}
+
+#hardEight {
+	top: 20%;
+	margin-left: -2px;
+}
+
+#hardFour {
+	top: 20%;
+	left: 50%;
+	margin-left: -1px;
+}
+
+#ace-deuce {
+	margin-left: -2px;
+	width: 66px;
+}
+
+#snakeEyes {
+	left: 33%;
+	width: 64px;
+}
+
+#midnight {
+	left: 66%;
+	width: 66px;
+
+}
+
+#yo {
+	position: absolute;
+	border: 2px solid white;
+	top: 62%;
+	width: 100%;
+	margin-left: -2px;
+}
+
+#anyCraps {
+	position: absolute;
+	border: 2px solid white;
+	width: 100%;
+	height: 42px;
+	top: 83%;
+	margin-top: -2px;
+	margin-left: -2px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
