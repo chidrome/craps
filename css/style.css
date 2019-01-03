@@ -8,6 +8,9 @@
 	margin: auto;
 }
 
+
+/* ------------------------------- CENTER BETS CSS ------------------------------- */
+
 .centerBets {
 	position: absolute;
 	border: 2px solid white;
@@ -41,169 +44,6 @@
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 	text-align: center;
-}
-
-.centerSingleRoll {
-	position: absolute;
-	border: 2px solid white;
-	height: 50px;
-	top: 41%;
-	margin-top: -1px;
-	text-align: center;
-}
-
-/* this is just for container purposes.  */
-.leftSideBets {
-	position: absolute;
- 	/*border: 2px solid white; */
-	height: 407px;
-	width: 400px;
-	top: 9%;
-	left: 7%;
-	border-top-left-radius: 20px;
-	border-bottom-left-radius: 20px;
-}
-
-/* this is just for container purposes. */
-.row {
-	position: absolute;
- 	/*border: 2px solid white; */
-	width: 360px;
-	left: 9%;
-	top: 0;
-}
-
-.dontComeBar, .across4, .across5, .across6, .across8, .across9, .across10 {
-	display: inline-block;
-	border: 2px solid white;
-	width: 13.17%;
-	margin-left: -2px;
-	text-align: center;
-	height: 70px;
-}
-
-.leftPassLine {
-	position: absolute;
-	width: 32px;
-	height: 400px;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
-}
-
-.rightBottomPassLine {
-	position: absolute;
-	top: 100.5%;
-	width: 320px;
-	height: 30px;
-	margin: -35px;
-	left: 9.3%;
-	border-bottom-left-radius: 10px;
-	border-right: 2px solid white;
-}
-
-.leftDontPassBar {
-	position: absolute;
-	width: 28px;
-	height: 298px;
-	border: 2px solid blue;
-	left: -2px;
-	border-bottom-left-radius: 10px;
-}
-
-.rightBottomDontPassBar {
-	position: absolute;
-	top: 102.5%;
-	width: 286px;
-	height: 25px;
-	margin: -35px;
-	left: 11.7%;
-	border: 2px solid red;
-	border-bottom-left-radius: 10px;
-}
-
-.across10 {
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-}
-
-.passLineContainer {
-    border-bottom: 2px solid white;
-    border-left: 2px solid white;
-    border-top: 2px solid white;
-    height: 400px;
-    width: 80%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
-.leftPassLine:hover, .rightBottomPassLine:hover {
-	background-color: red;
-}
-
-.comeBets {
-	position: absolute;
-	border: 2px solid white;
-	width: 88.7%;
-	height: 169px;
-	left: 10%;
-	text-align: center;
-	vertical-align: middle;
-	line-height: 169px;
-
-}
-
-.fieldBets {
-	position: absolute;
-	border: 2px solid white;
-	height: 100px;
-	width: 88.7%;
-	top: 57%;
-	left: 10%;
-	text-align: center;
-	vertical-align: middle;
-	line-height: 100px;
-	border-bottom-left-radius: 10px;
-}
-
-.verticalPassLineName {
-	transform: rotate(-270deg);
-	position: absolute;
-	top: 50%;
-	left: -2%;
-}
-
-.verticalDontPassBarName {
-	transform: rotate(-270deg);
-	position: absolute;
-	top: 30%;
-}
-
-.bottomPassLineName {
-	position: absolute;
-	left: 40%;
-	top: 93%;
-}
-
-.rightBottomDontPassBarName {
-	position: absolute;
-	left: 40%;
-	top: 20%;
-}
-
-.mask {
-	border-left: 2px solid white;
-	border-bottom: 2px solid white;
-	position: relative;
-	float: right;
-	right: -2px;
-	top: 17.5%;
-	width: 90%;
-	height: 75%;
-	border-bottom-left-radius: 10px;
-}
-
-.mask:hover {
-	background-color: green;
 }
 
 #hardSix {
@@ -266,9 +106,218 @@
 	border-bottom-left-radius: 20px;
 }
 
+.centerSingleRoll {
+	position: absolute;
+	border: 2px solid white;
+	height: 50px;
+	top: 41%;
+	margin-top: -1px;
+	text-align: center;
+}
+
+/* ------------------------------- LEFTSIDE BETS CSS ------------------------------- */
+.leftSideBets {
+	position: absolute;
+	height: 407px;
+	width: 400px;
+	top: 9%;
+	left: 7%;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+.row {
+	position: absolute;
+	width: 360px;
+	left: 9%;
+	top: 0;
+}
+
+.dontComeBar, .across4, .across5, .across6, .across8, .across9, .across10 {
+	display: inline-block;
+	border: 2px solid white;
+	width: 13.17%;
+	margin-left: -2px;
+	text-align: center;
+	height: 70px;
+}
+
+
+.across10 {
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.comeBets {
+	position: absolute;
+	border: 2px solid white;
+	width: 88.7%;
+	height: 169px;
+	left: 10%;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 169px;
+
+}
+
+.fieldBets {
+	position: absolute;
+	border: 2px solid white;
+	height: 100px;
+	width: 88.7%;
+	top: 57%;
+	left: 10%;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 100px;
+	border-bottom-left-radius: 10px;
+}
+
+/* -------------------------------PASS LINE CSS -------------------------------*/
+.passLineContainer {
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    height: 400px;
+    width: 80%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.mask {
+	border-left: 2px solid white;
+	border-bottom: 2px solid white;
+	position: relative;
+	float: right;
+	right: -2px;
+	top: 17.5%;
+	width: 90%;
+	height: 75%;
+	border-bottom-left-radius: 10px;
+}
+
+.leftPassLine {
+	position: absolute;
+	width: 32px;
+	height: 400px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.rightBottomPassLine {
+	position: absolute;
+	top: 100.5%;
+	width: 320px;
+	height: 30px;
+	margin: -35px;
+	left: 9.3%;
+	border-bottom-left-radius: 10px;
+	border-right: 2px solid white;
+}
+
+.leftDontPassBar {
+	position: absolute;
+	width: 28px;
+	height: 298px;
+	left: -2px;
+	border-bottom-left-radius: 10px;
+}
+
+.rightBottomDontPassBar {
+	position: absolute;
+	top: 102.5%;
+	width: 287px;
+	height: 27px;
+	margin: -35px;
+	left: 11.7%;
+	border-right: 2px solid white;
+	border-bottom-left-radius: 10px;
+}
+
+.verticalPassLineName {
+	transform: rotate(-270deg);
+	position: absolute;
+	top: 50%;
+	left: -35%;
+	white-space: nowrap;
+}
+
+.verticalDontPassBarName {
+	transform: rotate(-270deg);
+	position: absolute;
+	top: 50%;
+	left: -110%;
+	white-space: nowrap;
+}
+
+.bottomPassLineName {
+	position: absolute;
+	left: 40%;
+	top: 10%;
+}
+
+.rightBottomDontPassBarName {
+	position: absolute;
+	left: 40%;
+	top: 20%;
+}
 
 
 
+
+/* ------------------------------- OTHER CSS -------------------------------*/
+
+#dieOne {
+	border: 3px solid gray;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	left: 70%;
+	top: 20%;
+}
+
+#dieTwo {
+	border: 3px solid gray;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	left: 74%;
+	top: 20%;
+}
+
+.dice {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 30px;
+}
+
+#button {
+	position: absolute;
+	left: 70%;
+	top: 30%;
+}
+
+#info {
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	border: 2px solid white;
+	left: 65%;
+	top: 40%
+}
+
+#results {
+	position: absolute;
+	width: 250px;
+	height: 20px;
+	border: 2px solid white;
+	left: 65%;
+	top: 35%
+}
+
+img {
+	margin-left: 15px;
+}
 
 
 

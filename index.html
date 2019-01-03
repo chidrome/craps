@@ -5,53 +5,56 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
 <div class="table">
 	<div class="centerBets">
-		<div class="hardWays" id="hardFour">Hard Four
+		<div class="hardWays bets anytimeBets" id="hardFour">Hard Four
 			<p class="payout">7 to 1</p>
 		</div>
-		<div class="hardWays" id="hardSix">Hard Six
+		<div class="hardWays bets anytimeBets" id="hardSix">Hard Six
 			<p class="payout">14 to 1</p>
 		</div>
-		<div class="hardWays" id="hardEight">Hard Eight
+		<div class="hardWays bets anytimeBets" id="hardEight">Hard Eight
 			<p class="payout">9 to 1</p>
 		</div>
-		<div class="hardWays" id="hardTen">Hard Ten
+		<div class="hardWays bets anytimeBets" id="hardTen">Hard Ten
 			<p class="payout">7 to 1</p>
 		</div>
-		<div class="centerSingleRoll" id="ace-deuce">AD
+		<div class="centerSingleRoll bets anytimeBets" id="ace-deuce">AD
 			<p class="payout">15 to 1</p>
 		</div>
-		<div class="centerSingleRoll" id="snakeEyes">SE
+		<div class="centerSingleRoll bets anytimeBets" id="snakeEyes">SE
 			<p class="payout">30 to 1</p>
 		</div>
-		<div class="centerSingleRoll" id="midnight">Midnight
+		<div class="centerSingleRoll bets anytimeBets" id="midnight">Midnight
 			<p class="payout">30 to 1</p>
 		</div>
-		<div class="centerSingleRoll" id="yo">Yo
+		<div class="centerSingleRoll bets anytimeBets" id="yo">Yo
 			<p class="payout">15 to 1</p>
 		</div>
-		<div class="centerSingleRoll" id="anyCraps">
+		<div class="centerSingleRoll bets anytimeBets" id="anyCraps">
 			<p class="payout">Any Craps 7 to 1</p>
 		</div>
 	</div>
-	<div class="seven">Any Seven
+	<div class="seven bets anytimeBets" id="anySeven">Any Seven
 		<p class="payout">4 to 1</p>
 	</div>
 	<div class="leftSideBets">
 		<div class="passLineContainer">
-			<div class="leftPassLine"></div>
-			<div class="rightBottomPassLine"></div>
+			<div class="leftPassLine passLineBets beforePointBets" id="passLine">
+				<div class="verticalPassLineName">pass line</div>
+			</div>
+			<div class="rightBottomPassLine passLineBets beforePointBets" id="passLine"">
+				<div class="bottomPassLineName">pass line</div>
+			</div>
 		    <div class="mask">
-		    	<div class="leftDontPassBar dontPassBar">
+		    	<div class="leftDontPassBar dontPassLineBets beforePointBets" id="dontPassLine">
 	    			<div class="verticalDontPassBarName">Don't Pass Bar</div>
 	    		</div>
-		    	<div class="rightBottomDontPassBar dontPassBar">
+		    	<div class="rightBottomDontPassBar dontPassLineBets beforePointBets" id="dontPassLine">
 		    		<div class="rightBottomDontPassBarName">Don't Pass Bar</div>
 		    	</div>
 		    	<div class="comeBets">COME</div>
-		    	<div class="fieldBets">FIELD BETS</div>
+		    	<div class="fieldBets anytimeBets" id="field_bets">FIELD BETS</div>
 		    </div>
 			<div class="row">
 				<div class="dontComeBar">DCB
@@ -61,15 +64,33 @@
 				</div><div class="across8">8
 				</div><div class="across9">9
 				</div><div class="across10">10</div>
-			</div>    
-		    <div class="verticalPassLineName passLine">pass line</div>
-		    <div class="bottomPassLineName passLine">pass line</div>
+			</div>
 		</div>
 	</div>
-
-
+	<div class="dice" id="dieOne"></div>
+	<div class="dice" id="dieTwo"></div>
+	<button id="button" onClick="rollDice()">Roll the Dice!</button>
+	<div id="results"></div>
+	<div id="info">
+		<div>
+			<img src="#" class="currency" id="5" value="5">5
+			<img src="#" class="currency" id="10" vaue="10">10
+			<img src="#" class="currency" id="25" value="25">25
+			<img src="#" class="currency" id="100" value="100">100
+		</div>
+		<div id="playerMoney">Current Stack: $0</div>
+		<div id="currentBet">Current Bet: $0</div>
+	</div>
 </div>
-
-
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
