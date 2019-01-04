@@ -213,6 +213,16 @@ function rollDice() {
 				passSumPay();
 				moneyStatusText.innerHTML = 'Current Stack: $' + currentStack;
 				bottomPassLineName = [];
+				across4 = [];
+			break;
+			case total === point && point === 5:
+				win();
+				var sum = across5.reduce((a,b)=> a + b , 0);
+				currentStack = currentStack + sum;
+				passSumPay();
+				moneyStatusText.innerHTML = 'Current Stack: $' + currentStack;
+				bottomPassLineName = [];
+				across5 = [];
 			break;
 			case total === point && point === 6:
 				win();
@@ -221,6 +231,7 @@ function rollDice() {
 				passSumPay();
 				moneyStatusText.innerHTML = 'Current Stack: $' + currentStack;
 				bottomPassLineName = [];
+				across6 = [];
 			break;
 			case total === point && point === 8:
 				win();
@@ -229,6 +240,7 @@ function rollDice() {
 				passSumPay();
 				moneyStatusText.innerHTML = 'Current Stack: $' + currentStack;
 				bottomPassLineName = [];
+				across8 = [];
 			break;
 			case total === point && point === 9:
 				win();
@@ -237,6 +249,7 @@ function rollDice() {
 				passSumPay();
 				moneyStatusText.innerHTML = 'Current Stack: $' + currentStack;
 				bottomPassLineName = [];
+				across9 = [];
 			break;
 			case total === point && point === 10:
 				win();
@@ -245,6 +258,7 @@ function rollDice() {
 				passSumPay();
 				moneyStatusText.innerHTML = 'Current Stack: $' + currentStack;
 				bottomPassLineName = [];
+				across10 = [];
 			break;
 			case total === 7:
 				currentStack = currentStack - totalBetPlaced;
