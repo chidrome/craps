@@ -12,8 +12,8 @@
 		<div class="bets anytimeBets ten" id="hardTen">Hard Ten</div>
 		<div class="bets anytimeBets eight" id="hardEight">Hard Eight</div>
 		<div class="bets anytimeBets six" id="hardSix">Hard Six</div>
-		<div class="centerSingleRoll bets anytimeBets" id="ace-deuce">AD</div>
-		<div class="centerSingleRoll bets anytimeBets" id="snakeEyes">SE</div>
+		<div class="centerSingleRoll bets anytimeBets" id="ace-deuce">Ace-Deus</div>
+		<div class="centerSingleRoll bets anytimeBets" id="snakeEyes">Snake Eyes</div>
 		<div class="centerSingleRoll bets anytimeBets" id="midnight">Midnight</div>
 		<div class="centerSingleRoll bets anytimeBets" id="yo">Yo</div>
 		<div class="centerSingleRoll bets anytimeBets" id="anyCraps">Any Craps 7 to 1</div>
@@ -26,8 +26,8 @@
 		</div><div class="across8 across" id="across8">8
 		</div><div class="across9 across" id="across9">9
 		</div><div class="across10 across" id="across10">10</div>
-		<div class="verticalPassLineName">pass line</div>
-		<div class="verticalDontPassBarName">Don't Pass Bar</div>
+		<div class="verticalPassLineName"></div>
+		<div class="verticalDontPassBarName"></div>
 		<div class="comeBets">COME</div>
 		<div class="fieldBets anytimeBets" id="field_bets">FIELD BETS</div>
 		<div class="rightBottomDontPassBarName beforePointBets">Don't Pass Bar</div>
@@ -45,8 +45,9 @@
 			<img src="imgs/black-poker-chip.png" class="currency" id="100" alt="100">
 		</div>
 		<div id="playerMoney">Current Stack:</div>
-		<div id="currentBet">Current Bet: $0</div>
+		<div id="currentBet">Current Bet: $0</div><button class="clearBet" onClick="clearBet()">Clear Bet</button>
 		<div id="pointStatus">Point is</div>
+		<div id="totalBetPlaced">Total Bet Placed: $</div>
 	</div>
 </div>
 <script type="text/javascript" src="js/script.js"></script>
