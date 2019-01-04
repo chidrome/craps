@@ -13,7 +13,6 @@
 
 .centerBets {
 	position: absolute;
-	border: 2px solid white;
 	border-radius: 20px;
 	height: 250px;
 	width: 200px;
@@ -23,67 +22,64 @@
 	margin-top: -60px;
 }
 
-.hardWays {
-	position: absolute;
-	border: 2px solid white;
-	width: 99px;
-	height: 50px;
-	text-align: center;
-}
-
-.seven {
+#anySeven {
 	position: absolute;
 	border: 2px solid white;
 	border-color: 20px;
 	width: 120px;
 	height: 50px;
-	left: 50%;
-	top: 50%;
-	margin-left: -57px;
-	margin-top: -112px;
+	left: 21%;
+	top: -21%;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 	text-align: center;
 }
 
 #hardSix {
-	margin-left: -2px;
-	margin-top: -2px;
 	border-top-left-radius: 20px;
+	width: 50%;
+	height: 19% !important;
 }
 
 #hardTen {
-	left: 50%;
-	margin-top: -2px;
+	left: 51%;
+	width: 49%;
+	height: 19% !important;
 	border-top-right-radius: 20px;
-	margin-left: -1px;
 }
 
 #hardEight {
 	top: 20%;
-	margin-left: -2px;
+	width: 50%;
 }
 
 #hardFour {
 	top: 20%;
-	left: 50%;
-	margin-left: -1px;
+	left: 51%;
+	width: 49%;
 }
 
-#ace-deuce {
-	margin-left: -2px;
-	width: 66px;
+#hardSix, #hardTen, #hardEight, #hardFour {
+	border: 2px solid white;
+	position: absolute;
+	text-align: center;
+	height: 20%;
 }
 
 #snakeEyes {
-	left: 33%;
-	width: 64px;
+	left: 34%;
 }
 
 #midnight {
-	left: 66%;
-	width: 66px;
+	left: 68%;
+	width: 32% !important;
+}
 
+#ace-deuce, #snakeEyes, #midnight {
+	position: absolute;
+	border: 2px solid white;
+	width: 33%;
+	height: 20%;
 }
 
 #yo {
@@ -91,7 +87,6 @@
 	border: 2px solid white;
 	top: 62%;
 	width: 100%;
-	margin-left: -2px;
 }
 
 #anyCraps {
@@ -100,8 +95,6 @@
 	width: 100%;
 	height: 42px;
 	top: 83%;
-	margin-top: -2px;
-	margin-left: -2px;
 	border-bottom-right-radius: 20px;
 	border-bottom-left-radius: 20px;
 }
@@ -126,17 +119,13 @@
 	border-bottom-left-radius: 20px;
 }
 
-.row {
-	position: absolute;
-	width: 360px;
-	left: 9%;
-	top: 0;
-}
-
 .dontComeBar, .across4, .across5, .across6, .across8, .across9, .across10 {
+	position: relative;
 	display: inline-block;
 	border: 2px solid white;
-	width: 13.17%;
+	width: 11%;
+	left: 10%;
+	top: 1%;
 	margin-left: -2px;
 	text-align: center;
 	height: 70px;
@@ -151,9 +140,10 @@
 .comeBets {
 	position: absolute;
 	border: 2px solid white;
-	width: 88.7%;
-	height: 169px;
-	left: 10%;
+	width: 65%;
+	height: 150px;
+	left: 17%;
+	top: 18.7%;
 	text-align: center;
 	vertical-align: middle;
 	line-height: 169px;
@@ -163,10 +153,10 @@
 .fieldBets {
 	position: absolute;
 	border: 2px solid white;
-	height: 100px;
-	width: 88.7%;
-	top: 57%;
-	left: 10%;
+	height: 118px;
+	width: 65%;
+	top: 56%;
+	left: 17%;
 	text-align: center;
 	vertical-align: middle;
 	line-height: 100px;
@@ -174,95 +164,70 @@
 }
 
 /* -------------------------------PASS LINE CSS -------------------------------*/
-.passLineContainer {
-    border-bottom: 2px solid white;
-    border-left: 2px solid white;
-    border-top: 2px solid white;
-    height: 400px;
-    width: 80%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
-.mask {
-	border-left: 2px solid white;
-	border-bottom: 2px solid white;
-	position: relative;
-	float: right;
-	right: -2px;
-	top: 17.5%;
-	width: 90%;
-	height: 75%;
-	border-bottom-left-radius: 10px;
-}
-
-.leftPassLine {
-	position: absolute;
-	width: 32px;
-	height: 400px;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
-}
-
-.rightBottomPassLine {
-	position: absolute;
-	top: 100.5%;
-	width: 320px;
-	height: 30px;
-	margin: -35px;
-	left: 9.3%;
-	border-bottom-left-radius: 10px;
-	border-right: 2px solid white;
-}
-
-.leftDontPassBar {
-	position: absolute;
-	width: 28px;
-	height: 298px;
-	left: -2px;
-	border-bottom-left-radius: 10px;
-}
-
-.rightBottomDontPassBar {
-	position: absolute;
-	top: 102.5%;
-	width: 287px;
-	height: 27px;
-	margin: -35px;
-	left: 11.7%;
-	border-right: 2px solid white;
-	border-bottom-left-radius: 10px;
-}
-
 .verticalPassLineName {
+	position: absolute;
+	display: inline-flex;
+	width: 402px;
+	height: 32px;
 	transform: rotate(-270deg);
 	position: absolute;
-	top: 50%;
-	left: -35%;
+	top: 46.8%;
+	left: -45%;
 	white-space: nowrap;
+	text-align: right;
+	border-left: 2px solid white;
+	border-bottom: 2px solid white;
+	border-right: 2px solid white;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 
 .verticalDontPassBarName {
+	position: absolute;
+	display: inline-flex;
+	border-left: 2px solid white;
+	border-bottom: 2px solid white;
+	border-right: 2px solid white;
+	width: 298px;
+	height: 28px;
 	transform: rotate(-270deg);
 	position: absolute;
-	top: 50%;
-	left: -110%;
+	top: 52%;
+	left: -24.5%;
 	white-space: nowrap;
-}
-
-.bottomPassLineName {
-	position: absolute;
-	left: 40%;
-	top: 10%;
+	border-bottom-right-radius: 10px;
+	text-align: center;
 }
 
 .rightBottomDontPassBarName {
 	position: absolute;
-	left: 40%;
-	top: 20%;
+	display: inline-flex;
+	border-left: 2px solid white;
+	border-bottom: 2px solid white;
+	border-right: 2px solid white;
+	width: 290px;
+	height: 27px;
+	left: 9.5%;
+	top: 85.8%;
+	text-align: center;
+	border-bottom-left-radius: 10px;
 }
 
-
+.bottomPassLineName {
+	position: absolute;
+	display: inline-flex;
+	border-left: 2px solid white;
+	border-bottom: 2px solid white;
+	border-right: 2px solid white;
+	top: 100.5%;
+	width: 322px;
+	height: 31px;
+	left: 1.5%;
+	top: 92.7%;
+	text-align: center;
+	border-bottom-left-radius: 10px;
+	margin: auto;
+}
 
 
 /* ------------------------------- OTHER CSS -------------------------------*/
@@ -315,9 +280,21 @@
 	top: 35%
 }
 
-img {
-	margin-left: 15px;
+.currency {
+	position: relative !important;
+	display: inline-flex !important;
+	height: 30px;
+	width: 30px;
+	margin: auto;
 }
+
+.chips {
+	display: inline-flex;
+	width: 30px;
+	height: 30px;
+}
+
+
 
 
 

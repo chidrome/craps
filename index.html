@@ -7,65 +7,31 @@
 <body>
 <div class="table">
 	<div class="centerBets">
-		<div class="hardWays bets anytimeBets" id="hardFour">Hard Four
-			<p class="payout">7 to 1</p>
-		</div>
-		<div class="hardWays bets anytimeBets" id="hardSix">Hard Six
-			<p class="payout">14 to 1</p>
-		</div>
-		<div class="hardWays bets anytimeBets" id="hardEight">Hard Eight
-			<p class="payout">9 to 1</p>
-		</div>
-		<div class="hardWays bets anytimeBets" id="hardTen">Hard Ten
-			<p class="payout">7 to 1</p>
-		</div>
-		<div class="centerSingleRoll bets anytimeBets" id="ace-deuce">AD
-			<p class="payout">15 to 1</p>
-		</div>
-		<div class="centerSingleRoll bets anytimeBets" id="snakeEyes">SE
-			<p class="payout">30 to 1</p>
-		</div>
-		<div class="centerSingleRoll bets anytimeBets" id="midnight">Midnight
-			<p class="payout">30 to 1</p>
-		</div>
-		<div class="centerSingleRoll bets anytimeBets" id="yo">Yo
-			<p class="payout">15 to 1</p>
-		</div>
-		<div class="centerSingleRoll bets anytimeBets" id="anyCraps">
-			<p class="payout">Any Craps 7 to 1</p>
-		</div>
-	</div>
-	<div class="seven bets anytimeBets" id="anySeven">Any Seven
-		<p class="payout">4 to 1</p>
+		<div class="bets anytimeBets seven" id="anySeven">Any Seven</div>
+		<div class="bets anytimeBets four" id="hardFour">Hard Four</div>
+		<div class="bets anytimeBets ten" id="hardTen">Hard Ten</div>
+		<div class="bets anytimeBets eight" id="hardEight">Hard Eight</div>
+		<div class="bets anytimeBets six" id="hardSix">Hard Six</div>
+		<div class="centerSingleRoll bets anytimeBets" id="ace-deuce">AD</div>
+		<div class="centerSingleRoll bets anytimeBets" id="snakeEyes">SE</div>
+		<div class="centerSingleRoll bets anytimeBets" id="midnight">Midnight</div>
+		<div class="centerSingleRoll bets anytimeBets" id="yo">Yo</div>
+		<div class="centerSingleRoll bets anytimeBets" id="anyCraps">Any Craps 7 to 1</div>
 	</div>
 	<div class="leftSideBets">
-		<div class="passLineContainer">
-			<div class="leftPassLine passLineBets beforePointBets" id="passLine">
-				<div class="verticalPassLineName">pass line</div>
-			</div>
-			<div class="rightBottomPassLine passLineBets beforePointBets" id="passLine"">
-				<div class="bottomPassLineName">pass line</div>
-			</div>
-		    <div class="mask">
-		    	<div class="leftDontPassBar dontPassLineBets beforePointBets" id="dontPassLine">
-	    			<div class="verticalDontPassBarName">Don't Pass Bar</div>
-	    		</div>
-		    	<div class="rightBottomDontPassBar dontPassLineBets beforePointBets" id="dontPassLine">
-		    		<div class="rightBottomDontPassBarName">Don't Pass Bar</div>
-		    	</div>
-		    	<div class="comeBets">COME</div>
-		    	<div class="fieldBets anytimeBets" id="field_bets">FIELD BETS</div>
-		    </div>
-			<div class="row">
-				<div class="dontComeBar">DCB
-				</div><div class="across4">4
-				</div><div class="across5">5
-				</div><div class="across6">6
-				</div><div class="across8">8
-				</div><div class="across9">9
-				</div><div class="across10">10</div>
-			</div>
-		</div>
+		<div class="dontComeBar" id="dontComeBar">DCB
+		</div><div class="across4 across" id="across4">4
+		</div><div class="across5 across" id="across5">5
+		</div><div class="across6 across" id="across6">6
+		</div><div class="across8 across" id="across8">8
+		</div><div class="across9 across" id="across9">9
+		</div><div class="across10 across" id="across10">10</div>
+		<div class="verticalPassLineName">pass line</div>
+		<div class="verticalDontPassBarName">Don't Pass Bar</div>
+		<div class="comeBets">COME</div>
+		<div class="fieldBets anytimeBets" id="field_bets">FIELD BETS</div>
+		<div class="rightBottomDontPassBarName beforePointBets">Don't Pass Bar</div>
+		<div class="bottomPassLineName beforePointBets">pass line</div>
 	</div>
 	<div class="dice" id="dieOne"></div>
 	<div class="dice" id="dieTwo"></div>
@@ -73,13 +39,14 @@
 	<div id="results"></div>
 	<div id="info">
 		<div>
-			<img src="#" class="currency" id="5" value="5">5
-			<img src="#" class="currency" id="10" vaue="10">10
-			<img src="#" class="currency" id="25" value="25">25
-			<img src="#" class="currency" id="100" value="100">100
+			<img src="imgs/red-poker-chip.png" class="currency" id="5" alt="5">
+			<img src="imgs/blue-poker-chip.png" class="currency" id="10" alt="10">
+			<img src="imgs/green-poker-chip.png" class="currency" id="25" alt="25">
+			<img src="imgs/black-poker-chip.png" class="currency" id="100" alt="100">
 		</div>
-		<div id="playerMoney">Current Stack: $0</div>
+		<div id="playerMoney">Current Stack:</div>
 		<div id="currentBet">Current Bet: $0</div>
+		<div id="pointStatus">Point is</div>
 	</div>
 </div>
 <script type="text/javascript" src="js/script.js"></script>
