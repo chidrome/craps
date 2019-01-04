@@ -19,7 +19,6 @@ function start(){
 
 function clicked() {
 	if(currentStack >= totalBetPlaced && (totalBetPlaced + bet) <= currentStack && bet != 0){
-		console.log(totalBetPlaced)
 		results.innerHTML = '';
 		totalBetPlaced = totalBetPlaced + bet;
 		totalBetPlacedText.innerHTML = 'Total Bet Placed: $' + totalBetPlaced;
@@ -191,14 +190,12 @@ function rollDice() {
 			break;
 			case total === 3 || total === 2 || total === 12:
 				lose();
-				console.log('You\'ve Crapped out!');
 			break;
 			default:
 				point = total;
 				pointStatus.innerHTML = 'Point is ' + point;
 				pointButton = true;
 				addAcrossListeners();
-				console.log(pointButton);
 		}
 	}
 	else if(pointButton && bet != 0){
@@ -298,7 +295,6 @@ function removeAcrossListeners(){
 
 function win(){
 	results.innerHTML = "You've Won!"
-	console.log(total);
 
 	//payout
 
@@ -307,7 +303,6 @@ function win(){
 }
 
 function lose(){
-	console.log(total);
 	results.innerHTML = 'You\'ve Lost!';
 	reset();
 }
