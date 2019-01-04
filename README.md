@@ -10,17 +10,17 @@ There are two phases to playing craps. One is before the Point is On and is call
 3. Roll the Dice.
 4. Bets "across" (4,5,6,8,9,10), can only be placed when the Point is On.
 
-### Technologies Used 
+## Technologies Used 
 * Materialize CSS Framework
 * HTML
 * CSS
 * Javascript
 
-### Known Bugs
+## Known Bugs
 * chip images when placing bets.
 * payouts during round for any bets, other than the Pass Line, when point is on is not happening.
 
-### Future Updates
+## Future Updates
 * Calculation for different payouts depending on where the bet is placed. ie; 7 to 1.
 * Field Bets and Come Bets.
 
