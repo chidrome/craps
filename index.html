@@ -7,16 +7,16 @@
 <body>
 <div class="table">
 	<div class="centerBets">
-		<div class="bets anytimeBets seven" id="anySeven">Any Seven</div>
-		<div class="bets anytimeBets four" id="hardFour">Hard Four</div>
-		<div class="bets anytimeBets ten" id="hardTen">Hard Ten</div>
-		<div class="bets anytimeBets eight" id="hardEight">Hard Eight</div>
-		<div class="bets anytimeBets six" id="hardSix">Hard Six</div>
-		<div class="centerSingleRoll bets anytimeBets" id="ace-deuce">Ace-Deus</div>
-		<div class="centerSingleRoll bets anytimeBets" id="snakeEyes">Snake Eyes</div>
-		<div class="centerSingleRoll bets anytimeBets" id="midnight">Midnight</div>
-		<div class="centerSingleRoll bets anytimeBets" id="yo">Yo</div>
-		<div class="centerSingleRoll bets anytimeBets" id="anyCraps">Any Craps 7 to 1</div>
+		<div class="bets anytimeBets seven" id="anySeven"><p>Any Seven</p></div>
+		<div class="bets anytimeBets four" id="hardFour"><p>Hard Four</p></div>
+		<div class="bets anytimeBets ten" id="hardTen"><p>Hard Ten</p></div>
+		<div class="bets anytimeBets eight" id="hardEight"><p>Hard Eight</p></div>
+		<div class="bets anytimeBets six" id="hardSix"><p>Hard Six</p></div>
+		<div class="centerSingleRoll bets anytimeBets" id="ace-deuce"><p>Ace-Deus</p></div>
+		<div class="centerSingleRoll bets anytimeBets" id="snakeEyes"><p>Snake Eyes</p></div>
+		<div class="centerSingleRoll bets anytimeBets" id="midnight"><p>Midnight</p></div>
+		<div class="centerSingleRoll bets anytimeBets" id="yo"><p>Yo</p></div>
+		<div class="centerSingleRoll bets anytimeBets" id="anyCraps"><p>Any Craps</p></div>
 	</div>
 	<div class="leftSideBets">
 		<div class="dontComeBar" id="dontComeBar">DCB
@@ -26,12 +26,12 @@
 		</div><div class="across8 across" id="across8">8
 		</div><div class="across9 across" id="across9">9
 		</div><div class="across10 across" id="across10">10</div>
-		<div class="verticalPassLineName"></div>
-		<div class="verticalDontPassBarName"></div>
-		<div class="comeBets">COME</div>
+		<div class="verticalPassLineName" id="verticalPassLineName"></div>
+		<div class="verticalDontPassBarName"id="verticalDontPassBarName"></div>
+		<div class="comeBets" id="come">COME</div>
 		<div class="fieldBets anytimeBets" id="field_bets">FIELD BETS</div>
-		<div class="rightBottomDontPassBarName beforePointBets">Don't Pass Bar</div>
-		<div class="bottomPassLineName beforePointBets">pass line</div>
+		<div class="rightBottomDontPassBarName beforePointBets" id="rightBottomDontPassBarName">Don't Pass Bar</div>
+		<div class="bottomPassLineName beforePointBets" id="bottomPassLineName">pass line</div>
 	</div>
 	<div class="dice" id="dieOne"></div>
 	<div class="dice" id="dieTwo"></div>
@@ -47,9 +47,11 @@
 		<div id="playerMoney">Current Stack:</div>
 		<div id="currentBet">Current Bet: $0</div><button class="clearBet" onClick="clearBet()">Clear Bet</button>
 		<div id="pointStatus">Point is</div>
-		<div id="totalBetPlaced">Total Bet Placed: $</div>
+		<div id="totalBetPlaced">Total Bet Placed: $0</div>
+		<button id="resetButton" onClick="resetGame()">Reset Game</button>
 	</div>
 </div>
+<script type="text/javascript" src="js/global.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

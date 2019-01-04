@@ -1,27 +1,3 @@
-//global variables
-var results = document.getElementById('results');
-var availableBets = document.getElementsByClassName('bets');
-var beforePointBets = document.getElementsByClassName('beforePointBets');
-var anytimeBets = document.getElementsByClassName('anytimeBets');
-var currency = document.getElementsByClassName('currency');
-var currentBetText = document.getElementById('currentBet');
-var across = document.getElementsByClassName('across');
-var pointStatus = document.getElementById('pointStatus');
-var moneyStatusText = document.getElementById('playerMoney');
-var totalBetPlacedText = document.getElementById('totalBetPlaced');
-var pointButton = false;
-var bet = 0;
-var confirmedBet = 0;
-var point = 0;
-var totalBetPlaced = 0;
-var previousDivCheckArray = [];
-var selectBet = true;
-
-var currentStack = 500;
-
-// dice
-var firstDice = document.getElementById('dieOne');
-var secondDice = document.getElementById('dieTwo');
 
 document.addEventListener("DOMContentLoaded", start)
 
@@ -42,27 +18,163 @@ function start(){
 }
 
 function clicked() {
-	
-	console.log(selectBet);
-	if(currentStack >= bet && bet != 0){
-		selectBet = false;
-		updateCurrentStack();
+	if(currentStack >= totalBetPlaced && (totalBetPlaced + bet) <= currentStack && bet != 0){
+		console.log(totalBetPlaced)
+		results.innerHTML = '';
 		totalBetPlaced = totalBetPlaced + bet;
 		totalBetPlacedText.innerHTML = 'Total Bet Placed: $' + totalBetPlaced;
 		if(this.childNodes.length >= 2){
-			console.log('Hi');
+			this.childNodes[0].textContent = this.childNodes[0].textContent;
+			switch(true){
+				case this.id === 'anySeven':
+					anySeven.push(bet);
+				break;
+				case this.id === 'hardFour':
+					hardFour.push(bet);
+				break;
+				case this.id === 'hardTen':
+					hardTen.push(bet);
+				break;
+				case this.id === 'hardSix':
+					hardSix.push(bet);
+				break;
+				case this.id === 'ace-deuce':
+					aceDeuce.push(bet);
+				break;
+				case this.id === 'snakeEyes':
+					snakeEyes.push(bet);
+				break;
+				case this.id === 'midnight':
+					midnight.push(bet);
+				break;
+				case this.id === 'yo':
+					yo.push(bet);
+				break;
+				case this.id === 'anyCraps':
+					anyCraps.push(bet);
+				break;
+				case this.id === 'dontComeBar':
+					dontComeBar.push(bet);
+				break;
+				case this.id === 'across4':
+					across4.push(bet);
+				break;
+				case this.id === 'across5':
+					across5.push(bet);
+				break;
+				case this.id === 'across6':
+					across6.push(bet);
+				break;
+				case this.id === 'across8':
+					across8.push(bet);
+				break;
+				case this.id === 'across9':
+					across9.push(bet);
+				break;
+				case this.id === 'across10':
+					across10.push(bet);
+				break;
+				case this.id === 'verticalPassLineName':
+					verticalPassLineName.push(bet);
+				break;
+				case this.id === 'verticalDontPassBarName':
+					verticalDontPassBarName.push(bet);
+				break;
+				case this.id === 'come':
+					come.push(bet);
+				break;
+				case this.id === 'field_bets':
+					fieldBets.push(bet);
+				break;
+				case this.id === 'rightBottomDontPassBarName':
+					rightBottomDontPassBarName.push(bet);
+				break;
+				case this.id === 'bottomPassLineName':
+					bottomPassLineName.push(bet);
+				break;
+				default:
+			};
 		}
 		else {
 			var addImg = document.createElement('img');
 			addImg.setAttribute('src', 'imgs/red-poker-chip.png');
 			this.appendChild(addImg);
 			this.childNodes[1].setAttribute("class", "chips");
+			switch(true){
+				case this.id === 'anySeven':
+					anySeven.push(bet);
+				break;
+				case this.id === 'hardFour':
+					hardFour.push(bet);
+				break;
+				case this.id === 'hardTen':
+					hardTen.push(bet);
+				break;
+				case this.id === 'hardSix':
+					hardSix.push(bet);
+				break;
+				case this.id === 'ace-deuce':
+					aceDeuce.push(bet);
+				break;
+				case this.id === 'snakeEyes':
+					snakeEyes.push(bet);
+				break;
+				case this.id === 'midnight':
+					midnight.push(bet);
+				break;
+				case this.id === 'yo':
+					yo.push(bet);
+				break;
+				case this.id === 'anyCraps':
+					anyCraps.push(bet);
+				break;
+				case this.id === 'dontComeBar':
+					dontComeBar.push(bet);
+				break;
+				case this.id === 'across4':
+					across4.push(bet);
+				break;
+				case this.id === 'across5':
+					across5.push(bet);
+				break;
+				case this.id === 'across6':
+					across6.push(bet);
+				break;
+				case this.id === 'across8':
+					across8.push(bet);
+				break;
+				case this.id === 'across9':
+					across9.push(bet);
+				break;
+				case this.id === 'across10':
+					across10.push(bet);
+				break;
+				case this.id === 'verticalPassLineName':
+					verticalPassLineName.push(bet);
+				break;
+				case this.id === 'verticalDontPassBarName':
+					verticalDontPassBarName.push(bet);
+				break;
+				case this.id === 'come':
+					come.push(bet);
+				break;
+				case this.id === 'field_bets':
+					fieldBets.push(bet);
+				break;
+				case this.id === 'rightBottomDontPassBarName':
+					rightBottomDontPassBarName.push(bet);
+				break;
+				case this.id === 'bottomPassLineName':
+					bottomPassLineName.push(bet);
+				break;
+				default:
+			};
 		}
 	}
 }
 
 function rollDice() {
-	if(!pointButton){
+	if(!pointButton && bet != 0){
 		var d1 = Math.floor(Math.random() * 6) + 1;
 		var d2 = Math.floor(Math.random() * 6) + 1;
 		total = d1 + d2;
@@ -72,7 +184,10 @@ function rollDice() {
 		switch(true) {
 			case total === 7 || total === 11:
 				win();
-				console.log('You WIN!');
+				var sum = bottomPassLineName.reduce((a,b)=> a + b, 0);
+				currentStack = currentStack + sum;
+				moneyStatusText.innerHTML = 'Current Stack: $' + currentStack;
+				bottomPassLineName = [];
 			break;
 			case total === 3 || total === 2 || total === 12:
 				lose();
@@ -82,10 +197,11 @@ function rollDice() {
 				point = total;
 				pointStatus.innerHTML = 'Point is ' + point;
 				pointButton = true;
+				addAcrossListeners();
 				console.log(pointButton);
 		}
 	}
-	else if(pointButton){
+	else if(pointButton && bet != 0){
 		var d1 = Math.floor(Math.random() * 6) + 1;
 		var d2 = Math.floor(Math.random() * 6) + 1;
 		firstDice.innerHTML = d1;
@@ -93,11 +209,50 @@ function rollDice() {
 		total = d1 + d2;
 		results.innerHTML = total;
 		switch(true) {
-			case total === point:
-				console.log('You WIN');
+			case total === point && point === 4:
 				win();
+				var sum = across4.reduce((a,b)=> a + b , 0);
+				currentStack = currentStack + sum;
+				passSumPay();
+				moneyStatusText.innerHTML = 'Current Stack: $' + currentStack;
+				bottomPassLineName = [];
+			break;
+			case total === point && point === 6:
+				win();
+				var sum = across6.reduce((a,b)=> a + b , 0);
+				currentStack = currentStack + sum;
+				passSumPay();
+				moneyStatusText.innerHTML = 'Current Stack: $' + currentStack;
+				bottomPassLineName = [];
+			break;
+			case total === point && point === 8:
+				win();
+				var sum = across8.reduce((a,b)=> a + b , 0);
+				currentStack = currentStack + sum;
+				passSumPay();
+				moneyStatusText.innerHTML = 'Current Stack: $' + currentStack;
+				bottomPassLineName = [];
+			break;
+			case total === point && point === 9:
+				win();
+				var sum = across9.reduce((a,b)=> a + b , 0);
+				currentStack = currentStack + sum;
+				passSumPay();
+				moneyStatusText.innerHTML = 'Current Stack: $' + currentStack;
+				bottomPassLineName = [];
+			break;
+			case total === point && point === 10:
+				win();
+				var sum = across10.reduce((a,b)=> a + b , 0);
+				currentStack = currentStack + sum;
+				passSumPay();
+				moneyStatusText.innerHTML = 'Current Stack: $' + currentStack;
+				bottomPassLineName = [];
 			break;
 			case total === 7:
+				currentStack = currentStack - totalBetPlaced;
+				moneyStatusText.innerHTML = 'Current Stack: $' + currentStack;
+				bottomPassLineName = [];
 				lose();
 			break;
 			default:
@@ -105,15 +260,7 @@ function rollDice() {
 	}
 }
 
-// function checkWin() {
-// 	if(results.innerHTML == 7) {
-// 		results.innerHTML = "You've Crapped Out!";
-// 		reset();
-// 	}
-// 	else if(results.innerHTML != 7) {
-// 	}
-// }
-
+//add listeners
 function addPassLineListeners(){
 	for(var i = 0; i < beforePointBets.length; i++){
 		beforePointBets[i].addEventListener('click', clicked);
@@ -132,8 +279,6 @@ function currencyListener(){
 			if(selectBet && currentStack > bet && (bet + parseInt(this.alt)) <= currentStack){
 				bet = parseInt(this.alt) + bet;
 				currentBetText.innerHTML = 'Current Bet: $' + bet;
-				console.log(bet);
-				console.log(currentStack);
 			}
 		});
 	}
@@ -142,6 +287,12 @@ function currencyListener(){
 function addAcrossListeners(){
 	for(var i = 0; i < across.length; i++){
 		across[i].addEventListener('click', clicked);
+	}
+}
+
+function removeAcrossListeners(){
+	for(var i = 0; i < across.length; i++){
+		across[i].removeEventListener('click', clicked);
 	}
 }
 
@@ -182,31 +333,34 @@ function reset(){
 
 	// change the point text and result text
 	pointStatus.innerHTML = 'Point is Off';
-	totalBetPlacedText = 'Total Bet Placed: $' + totalBetPlaced;
+	totalBetPlacedText.innerHTML = 'Total Bet Placed: $' + totalBetPlaced;
+	currentBetText.innerHTML = 'Current Bet: $' + bet;
+	
 
 	// reset the dice
 	firstDice.innerHTML = '';
 	secondDice.innerHTML = '';
+
+	removeAcrossListeners();
 }
 
-function updateCurrentStack(){
-	if(!selectBet){
-		currentStack = currentStack - bet;
-		moneyStatusText.innerHTML = 'Current Stack: $' + currentStack;
-		console.log(currentStack);
-		selectBet = true;
-	}
+//refactor payout
+function passSumPay(){
+	var passSum = bottomPassLineName.reduce((a,b)=> a + b , 0);
+	currentStack = currentStack + passSum;
+}
+
+// reset the whole game and the stack
+function resetGame(){
+	reset();
+	currentStack = 1000;
+	results.innerHTML = '';
+	moneyStatusText.innerHTML = 'Current Stack: $' + currentStack;
 }
 
 function clearBet(){
 	bet = 0;
 	currentBetText.innerHTML = 'Current Bet: $' + bet;
 }
-
-function payOut(){
-
-}
-
-
 
 

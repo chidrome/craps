@@ -288,7 +288,13 @@
 	margin: auto;
 }
 
+p {
+	position: relative;
+	margin: 0;
+}
+
 .chips {
+	position: absolute;
 	display: inline-flex;
 	width: 30px;
 	height: 30px;
